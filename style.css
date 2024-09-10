@@ -2,9 +2,15 @@
     --main-color: #333;
     --background-color: #f4f4f4;
     --font-size: 16px;
-    --hover-icpn-color: #F16A50;
+    --hover-icon-color: #F16A50;
+    --text-white: #F8F1EA;
+    --text-dark: #000000;
     --header-heigth: 73px;
 }
+
+/* 320px */
+/* 768px */
+/* 1400px */
 
 * {
     margin: 0;
@@ -17,6 +23,8 @@ body {
     background-color: var(--background-color);
     color: var(--main-color);
     font-size: var(--font-size);
+    font-family: Montserrat, sans-serif;
+    color: var(--text-dark);
 }
 
 header {
@@ -29,14 +37,16 @@ header {
     width: 100%;
     height: var(--header-heigth);
     position: fixed;
-    top:0;
+    max-width: 1400px;
+    margin: 0 auto;
+    top: 0;
     left: 0;
     right: 0;
     z-index: 100;
     background: #ffffffa8;
 
     .logo {
-        min-width: 100px;
+        width: 100px;
         height: 20px;
     }
 
@@ -45,14 +55,14 @@ header {
     }
 
     nav {
-        width: 100%;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: end;
         gap: 10px;
-        svg{
-            width:20px;
+
+        svg {
+            width: 20px;
             height: 20px;
         }
 
@@ -70,38 +80,104 @@ header {
     }
 
 }
-main{
+
+main {
+    max-width: 1400px;
+    margin: 0 auto;
     position: relative;
     top: var(--header-heigth);
     left: 0;
     right: 0;
-    section{
+
+    section {
         width: 100%;
-        &>*{
-            display: none;
-        }
     }
-    .baner{
-        min-height: 385px;
-        background: green;
-        margin-bottom: 50px;
+
+    .arivals>*,
+    .partners>* {
+        display: none;
     }
-    .arivals{
+
+    .arivals {
         min-height: 665px;
         background: yellow;
         margin-bottom: 50px;
     }
-    .partners{
+
+    .partners {
         min-height: 270px;
         background: blue;
     }
 }
 
+.banner {
+    min-height: 385px;
+    background: green;
+    margin-bottom: 50px;
+    position: relative;
+    overflow: hidden;
+
+    .banner-card {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        padding: 60px 10px;
+        transition: all 0.5s ease;
+        background-size: cover;
+        background-position: left;
+
+        article {
+            width: 210px;
+            float: right;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h2 {
+            font-size: 26px;
+            font-weight: 700;
+            line-height: 31.69px;
+            text-align: center;
+            color: var(--text-white);
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        button {
+            border: 2px solid var(--text-white);
+            background: inherit;
+            color: var(--text-white);
+            padding: 10px 25px;
+            min-width: 160px;
+            font-family: Montserrat;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 19.5px;
+            text-align: center;
+        }
+    }
+
+    .prev {
+        left: 100%;
+    }
+
+    .active {
+        left: 0;
+    }
+
+    .next {
+        left: -100%;
+    }
+}
+
 footer {
-    width :100%;
+    width: 100%;
     min-height: 325px;
     background: #35312D;
-    &>*{
+
+    &>* {
         display: none;
     }
 }

@@ -1,1 +1,1 @@
-console.log("Project onWave initialized")
+console.log("Project onWave initialized");

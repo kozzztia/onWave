@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/12/12321.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
     <title>onWave</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+    <script defer src="script.js" type="module"></script>
 </head>
 
 <body>
@@ -49,15 +52,24 @@
         </nav>
     </header>
     <main>
-        <section class="baner">
-            <div>
-
+        <section class="banner">
+            <div class="banner-card prev" style="background-image : linear-gradient(180deg, rgba(0, 0, 0, 0.84) 0%, rgba(0, 0, 0, 0) 100%), url('./assets/bg-1.png');">
+                <article>
+                    <h2>Find your own style</h2>
+                    <button>View more</button>
+                </article>
             </div>
-            <div>
-
+            <div class="banner-card active" style="background-image : linear-gradient(180deg, rgba(0, 0, 0, 0.84) 0%, rgba(217, 217, 217, 0) 100%), url('./assets/bg-2.png');">
+                <article>
+                    <h2>expand your horizons</h2>
+                    <button>View more</button>
+                </article>
             </div>
-            <div>
-
+            <div class="banner-card next" style="background-image : linear-gradient(180deg, rgba(0, 0, 0, 0.84) 0%, rgba(217, 217, 217, 0) 100%), url('./assets/bg-3.png');">
+                <article>
+                    <h2>discover new options</h2>
+                    <button>View more</button>
+                </article>
             </div>
         </section>
         <section class="arivals">
@@ -114,34 +126,34 @@
                 <use xlink:href="./assets/sprite-logos.svg#roland"></use>
             </svg>
         </section>
+        <footer>
+            <section>
+                <svg width="15px" height="31px">
+                    <use xlink:href="./assets/sprite-logos.svg#facebook"></use>
+                </svg>
+                <svg width="30px" height="31px">
+                    <use xlink:href="./assets/sprite-logos.svg#instagram"></use>
+                </svg>
+                <svg width="23px" height="31px">
+                    <use xlink:href="./assets/sprite-logos.svg#pinterest"></use>
+                </svg>
+                <svg width="38px" height="33px">
+                    <use xlink:href="./assets/sprite-logos.svg#twitter"></use>
+                </svg>
+                <svg width="42px" height="33px">
+                    <use xlink:href="./assets/sprite-logos.svg#youtube"></use>
+                </svg>
+
+                <svg width="40px" height="72px">
+                    <use xlink:href="./assets/sprite-logos.svg#prev"></use>
+                </svg>
+                <svg width="40px" height="72px">
+                    <use xlink:href="./assets/sprite-logos.svg#next"></use>
+                </svg>
+            </section>
+        </footer>
 
     </main>
-    <footer>
-        <section>
-            <svg width="15px" height="31px">
-                <use xlink:href="./assets/sprite-logos.svg#facebook"></use>
-            </svg>
-            <svg width="30px" height="31px">
-                <use xlink:href="./assets/sprite-logos.svg#instagram"></use>
-            </svg>
-            <svg width="23px" height="31px">
-                <use xlink:href="./assets/sprite-logos.svg#pinterest"></use>
-            </svg>
-            <svg width="38px" height="33px">
-                <use xlink:href="./assets/sprite-logos.svg#twitter"></use>
-            </svg>
-            <svg width="42px" height="33px">
-                <use xlink:href="./assets/sprite-logos.svg#youtube"></use>
-            </svg>
-
-            <svg width="40px" height="72px">
-                <use xlink:href="./assets/sprite-logos.svg#prev"></use>
-            </svg>
-            <svg width="40px" height="72px">
-                <use xlink:href="./assets/sprite-logos.svg#next"></use>
-            </svg>
-        </section>
-    </footer>
 </body>
 
 </html>
