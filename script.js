@@ -1,9 +1,7 @@
 console.log("Project onWave initialized");
 
-const slides = document.querySelectorAll('.banner-card');
-const bullets = document.querySelectorAll('.banner-bullet');
-let currentIndex = 0;
-
+const slides = document.querySelectorAll('.banner-card')
+const bullets = document.querySelector('.banner-bullets')
 // gpt version
 // Function to display the slide based on index
 // function showSlide(index) {
@@ -50,19 +48,35 @@ let currentIndex = 0;
 
 // my version
 
-let prev = 0;
-let active = 1;
-let next = 2;
+
+let prev = slides.length - 1;
+let active = 0;
+let next = 1;
+
+for (let i = 0; i < slides.length; i++) {
+    const element = document.createElement('div'); 
+    element.classList.add("banner-bullet");
+    bullets.appendChild(element); 
+}
+
+bullets.children[active].classList.add('active')
 
 function startSlide() {
     prev = generate(prev);
     active = generate(active);
     next = generate(next);
-    slides.forEach(slide=>slide.classList.remove('prev', 'active', 'next'))
+
+    slides.forEach(slide => slide.classList.remove('prev', 'active', 'next'));
+    
     slides[prev].classList.add('prev');
     slides[active].classList.add('active');
     slides[next].classList.add('next');
-    console.log(prev, active, next);
+
+    for (let item of bullets.children) {
+        item.classList.remove('active');
+    }
+
+    bullets.children[active].classList.add('active');
 }
 
 function generate(num){
@@ -72,5 +86,4 @@ function generate(num){
 }
 
 
-
-setInterval(startSlide, 2000);
+setInterval(startSlide, 3000);

@@ -117,7 +117,7 @@ main {
     position: relative;
     overflow: hidden;
 
-    nav {
+    .banner-bullets {
         position: absolute;
         bottom: 20px;
         left: 0;
