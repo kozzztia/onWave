@@ -201,6 +201,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     h2 {
         font-family: Montserrat;
         font-size: 20px;
@@ -237,9 +238,6 @@ main {
             img {
                 margin-bottom: 10px;
                 width: 100%;
-                /* max-height: 100vh; */
-                /* min-height: 300px;
-                object-fit: contain; */
             }
 
             h4 {
@@ -313,6 +311,7 @@ main {
             }
         }
     }
+
     &>button {
         border: 2px solid var(--text-dark);
         background: inherit;
@@ -326,7 +325,7 @@ main {
         text-align: center;
         cursor: pointer;
         margin: 0 auto;
-        
+
     }
 
     @media (width > 768px) {
@@ -341,7 +340,93 @@ main {
 
 .partners {
     min-height: 270px;
-    background: blue;
+    background: inherit;
+    padding: 50px 10px;
+
+    h2 {
+        font-family: Montserrat;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 39.01px;
+        text-align: center;
+        color: var(--text-dark);
+        margin-bottom: 40px;
+        text-transform: uppercase;
+    }
+    .partners-list{
+        list-style: none;
+
+    }
+    .partner-card {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 65px;
+        svg{
+            width :100%;
+        }
+    }
+    .slick-arrow{
+        background: transparent;
+        border : none;
+        outline: none;
+        position: absolute;
+        bottom: 0;
+        height: 30px;
+        width: 16px;
+        svg{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .slick-prev{
+        left: 0;
+    }
+    .slick-next{
+        right : 0;
+    }
+    .slick-dots{
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 20px;
+        gap: 10px;
+        li{
+            width : 12px;
+            height: 12px;
+            overflow: hidden;
+            border-radius: 50px;
+            background: var(--text-white);
+            button{
+                background: none;
+                width :100%;
+                height: 100%;
+                border :none;
+                outline: none;
+                color :transparent;
+
+            }
+
+        }
+        .slick-active{
+            background: var(--active-color);
+        }
+    }
+
+    @media (width > 768px) {
+        padding: 50px 15px;
+    }
+
+    @media (width > 1400px) {
+        padding: 70px 40px;
+        .slick-arrow{
+            height: 72px;
+            width: 40px;
+        }
+    }
+
 }
 
 footer {

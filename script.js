@@ -140,3 +140,41 @@ $(respSliderButtons[1]).html(`
                 <use xlink:href="./assets/sprite-logos.svg#next"></use>
             </svg>
   `);
+
+  $('.autoplay').slick({
+    slidesToShow: 8,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 1400,
+        settings: {
+          dots : false,
+          arrows: true,
+          slidesToShow: 6,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          dots: true,
+          arrows: false,
+          slidesToShow: 2,
+        }
+      }
+    ]
+  });
+
+  const partnersSliderButtons = ($('.partners .slick-arrow'));
+
+  $(partnersSliderButtons[0]).html(`
+    <svg width="100px" height="34px">
+      <use xlink:href="./assets/sprite-logos.svg#prev"></use>
+    </svg>
+    `);
+$(partnersSliderButtons[1]).html(`
+      <svg width="100px" height="34px">
+        <use xlink:href="./assets/sprite-logos.svg#next"></use>
+    </svg>
+`);
