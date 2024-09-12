@@ -54,35 +54,35 @@ let active = 0;
 let next = 1;
 
 for (let i = 0; i < slides.length; i++) {
-    const element = document.createElement('div'); 
-    element.classList.add("banner-bullet");
-    bullets.appendChild(element); 
+  const element = document.createElement('div');
+  element.classList.add("banner-bullet");
+  bullets.appendChild(element);
 }
 
 bullets.children[active].classList.add('active')
 
 function startSlide() {
-    prev = generate(prev);
-    active = generate(active);
-    next = generate(next);
+  prev = generate(prev);
+  active = generate(active);
+  next = generate(next);
 
-    slides.forEach(slide => slide.classList.remove('prev', 'active', 'next'));
-    
-    slides[prev].classList.add('prev');
-    slides[active].classList.add('active');
-    slides[next].classList.add('next');
+  slides.forEach(slide => slide.classList.remove('prev', 'active', 'next'));
 
-    for (let item of bullets.children) {
-        item.classList.remove('active');
-    }
+  slides[prev].classList.add('prev');
+  slides[active].classList.add('active');
+  slides[next].classList.add('next');
 
-    bullets.children[active].classList.add('active');
+  for (let item of bullets.children) {
+    item.classList.remove('active');
+  }
+
+  bullets.children[active].classList.add('active');
 }
 
-function generate(num){
-    num++;
-    if(num > slides.length -1) num = 0;
-    return num
+function generate(num) {
+  num++;
+  if (num > slides.length - 1) num = 0;
+  return num
 }
 
 
@@ -91,16 +91,13 @@ setInterval(startSlide, 3000);
 
 // jQuery
 
-// $('body').on('touchstart', function(e) {
-//     e.passive = true;
-//   });
 $('.responsive').slick({
-    dots: false,
-    infinite: true,
-    speed: 300,
-    slidesToShow: 5,
-    slidesToScroll: 5,
-    responsive: [
+  dots: false,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 5,
+  slidesToScroll: 5,
+  responsive: [
     //   {
     //     breakpoint: 1400,
     //     settings: {
@@ -110,24 +107,36 @@ $('.responsive').slick({
     //       dots: true
     //     }
     //   },
-      {
-        breakpoint: 1400,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3
-        }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          dots: true,
-        }
+    {
+      breakpoint: 1400,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3
       }
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
-    ]
-  });
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
 
+const respSliderButtons = ($('.responsive .slick-arrow'));
+
+$(respSliderButtons[0]).html(`
+            <svg width="100px" height="34px">
+              <use xlink:href="./assets/sprite-logos.svg#prev"></use>
+            </svg>
+            `);
+$(respSliderButtons[1]).html(`
+              <svg width="100px" height="34px">
+                <use xlink:href="./assets/sprite-logos.svg#next"></use>
+            </svg>
+  `);
