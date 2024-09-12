@@ -87,3 +87,47 @@ function generate(num){
 
 
 setInterval(startSlide, 3000);
+
+
+// jQuery
+
+// $('body').on('touchstart', function(e) {
+//     e.passive = true;
+//   });
+$('.responsive').slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 5,
+    slidesToScroll: 5,
+    responsive: [
+    //   {
+    //     breakpoint: 1400,
+    //     settings: {
+    //       slidesToShow: 3,
+    //       slidesToScroll: 3,
+    //       infinite: true,
+    //       dots: true
+    //     }
+    //   },
+      {
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+        }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
+  });
+

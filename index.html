@@ -9,6 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <title>onWave</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js" type="module"></script>
@@ -53,37 +57,64 @@
     </header>
     <main>
         <section class="banner">
-            <div class="banner-card active" style="background-image : linear-gradient(180deg, rgba(0, 0, 0, 0.84) 0%, rgba(217, 217, 217, 0) 100%), url('./assets/bg-2.png');">
+            <div class="banner-card active"
+                style="background-image : linear-gradient(180deg, rgba(0, 0, 0, 0.84) 0%, rgba(217, 217, 217, 0) 100%), url('./assets/bg-2.png');">
                 <article>
                     <h2>expand your horizons</h2>
                     <button>View more</button>
                 </article>
             </div>
-            <div class="banner-card next" style="background-image : linear-gradient(180deg, rgba(0, 0, 0, 0.84) 0%, rgba(0, 0, 0, 0) 100%), url('./assets/bg-1.png');">
+            <div class="banner-card next"
+                style="background-image : linear-gradient(180deg, rgba(0, 0, 0, 0.84) 0%, rgba(0, 0, 0, 0) 100%), url('./assets/bg-1.png');">
                 <article>
                     <h2>Find your own style</h2>
                     <button>View more</button>
                 </article>
             </div>
-            <div class="banner-card " style="background-image : linear-gradient(180deg, rgba(0, 0, 0, 0.84) 0%, rgba(217, 217, 217, 0) 100%), url('./assets/bg-3.png');">
+            <div class="banner-card "
+                style="background-image : linear-gradient(180deg, rgba(0, 0, 0, 0.84) 0%, rgba(217, 217, 217, 0) 100%), url('./assets/bg-3.png');">
                 <article>
                     <h2>discover new options</h2>
                     <button>View more</button>
                 </article>
             </div>
-            <div class="banner-card" style="background-image : linear-gradient(180deg, rgba(0, 0, 0, 0.84) 0%, rgba(217, 217, 217, 0) 100%), url('./assets/bg-2.png');">
+            <div class="banner-card"
+                style="background-image : linear-gradient(180deg, rgba(0, 0, 0, 0.84) 0%, rgba(217, 217, 217, 0) 100%), url('./assets/bg-2.png');">
                 <article>
                     <h2>expand your horizons</h2>
                     <button>View more</button>
                 </article>
             </div>
-            <div class="banner-card" style="background-image : linear-gradient(180deg, rgba(0, 0, 0, 0.84) 0%, rgba(0, 0, 0, 0) 100%), url('./assets/bg-1.png');">
+            <div class="banner-card"
+                style="background-image : linear-gradient(180deg, rgba(0, 0, 0, 0.84) 0%, rgba(0, 0, 0, 0) 100%), url('./assets/bg-1.png');">
                 <article>
                     <h2>Find your own style</h2>
                     <button>View more</button>
                 </article>
             </div>
-            <div class="banner-card" style="background-image : linear-gradient(180deg, rgba(0, 0, 0, 0.84) 0%, rgba(217, 217, 217, 0) 100%), url('./assets/bg-3.png');">
+            <div class="banner-card"
+                style="background-image : linear-gradient(180deg, rgba(0, 0, 0, 0.84) 0%, rgba(217, 217, 217, 0) 100%), url('./assets/bg-3.png');">
+                <article>
+                    <h2>discover new options</h2>
+                    <button>View more</button>
+                </article>
+            </div>
+            <div class="banner-card"
+                style="background-image : linear-gradient(180deg, rgba(0, 0, 0, 0.84) 0%, rgba(217, 217, 217, 0) 100%), url('./assets/bg-2.png');">
+                <article>
+                    <h2>expand your horizons</h2>
+                    <button>View more</button>
+                </article>
+            </div>
+            <div class="banner-card"
+                style="background-image : linear-gradient(180deg, rgba(0, 0, 0, 0.84) 0%, rgba(0, 0, 0, 0) 100%), url('./assets/bg-1.png');">
+                <article>
+                    <h2>Find your own style</h2>
+                    <button>View more</button>
+                </article>
+            </div>
+            <div class="banner-card"
+                style="background-image : linear-gradient(180deg, rgba(0, 0, 0, 0.84) 0%, rgba(217, 217, 217, 0) 100%), url('./assets/bg-3.png');">
                 <article>
                     <h2>discover new options</h2>
                     <button>View more</button>
@@ -91,29 +122,41 @@
             </div>
             <div class="banner-bullets"></div>
         </section>
-        <section class="arivals">
-            <figure>
-                <img src="./assets/Hagstrom-Alvar-Limited-Edition.png" alt="Hagstrom Alvar Limited Edition">
-                <figcapure>Hagstrom Alvar Limited Edition</figcapure>
-            </figure>
-            <figure>
-                <img src="./assets/Hagstrom-Tremar-Viking-Deluxe-Cloudy-Seas.png"
-                    alt="Hagstrom Tremar Viking Deluxe Cloudy Seas">
-                <figcapure>Hagstrom Tremar Viking Deluxe Cloudy Seas</figcapure>
-            </figure>
-            <figure>
-                <img src="./assets/Gibson-Les-Paul-Standard-60s.png" alt="Gibson Les Paul Standard 60s">
-                <figcapure>Gibson Les Paul Standard 60s</figcapure>
-            </figure>
-            <figure>
-                <img src="./assets/Suhr-Standard-Plus-Trans-Blue-Denim.png" alt="Suhr Standard Plus Trans Blue Denim">
-                <figcapure>Suhr Standard Plus Trans Blue Denim</figcapure>
-            </figure>
-            <figure>
-                <img src="./assets/Fender-Telecaster-Black-Paisley-Limited-Edition.png"
-                    alt="Fender Telecaster Black Paisley Limited Edition">
-                <figcapure>Fender Telecaster Black Paisley Limited Edition</figcapure>
-            </figure>
+        <section class="arrivals">
+            <h2>new arrivals</h2>
+            <ul class="responsive">
+                <li>
+                    <img src="./assets/Hagstrom-Alvar-Limited-Edition.png" alt="Hagstrom Alvar Limited Edition">
+                    <h4>Hagstrom Alvar Limited Edition</h4>
+                    <span>€2.990,00</span>
+                </li>
+                <li>
+                    <img src="./assets/Hagstrom-Tremar-Viking-Deluxe-Cloudy-Seas.png"
+                        alt="Hagstrom Tremar Viking Deluxe Cloudy Seas">
+                    <h4>Hagstrom Tremar Viking Deluxe Cloudy Seas</h4>
+                    <span>€3.749,00</span>
+                </li>
+                <li>
+                    <img src="./assets/Gibson-Les-Paul-Standard-60s.png" alt="Gibson Les Paul Standard 60s">
+                    <h4>Gibson Les Paul Standard 60s</h4>
+                    <span>€3.449,00</span>
+                </li>
+                <li>
+                    <img src="./assets/Suhr-Standard-Plus-Trans-Blue-Denim.png"
+                        alt="Suhr Standard Plus Trans Blue Denim">
+                    <h4>Suhr Standard Plus Trans Blue Denim</h4>
+                    <span>€1.499,00</span>
+                </li>
+                <li>
+                    <img src="./assets/Fender-Telecaster-Black-Paisley-Limited-Edition.png"
+                        alt="Fender Telecaster Black Paisley Limited Edition">
+                    <h4>Fender Telecaster Black Paisley Limited Edition</h4>
+                    <span>€1.300,00</span>
+                </li>
+            </ul>
+            <button>
+                view more
+            </button>
         </section>
 
         <section class="partners">

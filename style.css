@@ -85,6 +85,7 @@ main {
     max-width: 1400px;
     margin: 0 auto;
     position: relative;
+    background: inherit;
     top: var(--header-heigth);
     left: 0;
     right: 0;
@@ -93,15 +94,8 @@ main {
         width: 100%;
     }
 
-    .arivals>*,
     .partners>* {
         display: none;
-    }
-
-    .arivals {
-        min-height: 665px;
-        background: yellow;
-        margin-bottom: 50px;
     }
 
     .partners {
@@ -135,7 +129,6 @@ main {
             height: 12px;
             background: #F8F1EAB2;
             transition: background 0.3s ease;
-            cursor: pointer;
         }
 
         .active {
@@ -149,7 +142,7 @@ main {
         width: 100%;
         height: 100%;
         padding: 60px 10px;
-        transition: 0; 
+        transition: 0;
         background-size: cover;
         background-position: 25% center;
         transform: translateX(-100%);
@@ -189,22 +182,165 @@ main {
     }
 
     .prev {
-        transform: translateX(100%); 
+        transform: translateX(100%);
         opacity: 1;
         transition: transform 0.6s ease;
     }
 
     .active {
-        transform: translateX(0); 
+        transform: translateX(0);
         opacity: 1;
         transition: transform 0.6s ease;
     }
 
     .next {
-        transform: translateX(-100%); 
+        transform: translateX(-100%);
         opacity: 0.5;
         transition: transform 0.6s ease;
     }
+}
+
+.arrivals {
+    min-height: 665px;
+    width: 100%;
+    margin: 0 auto;
+    background: inherit;
+    margin-bottom: 50px;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    h2 {
+        font-family: Montserrat;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 24.38px;
+        text-align: center;
+        text-transform: uppercase;
+        color: var(--text-dark);
+        margin-bottom: 40px;
+    }
+
+    ;
+
+    ul {
+        /* width: 100%;
+        height: 100%; */
+        margin-bottom: 40px;
+
+
+        .slick-slide {
+            position: relative;
+            min-height: 490px;
+            display: flex !important;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            padding: 20px 10px;
+
+            h4,
+            span {
+                width: 200px;
+            }
+
+            img {
+                margin-bottom: 10px;
+                width: 100%;
+                /* min-height: 300px;
+                object-fit: contain; */
+            }
+
+            h4 {
+                font-family: Montserrat;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 19.5px;
+                text-align: center;
+                color: var(--text-dark);
+                margin-bottom: 10px;
+            }
+
+            span {
+                font-family: Montserrat;
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 29.26px;
+                text-align: center;
+                color: var(--text-dark);
+                margin-top: auto;
+            }
+
+        }
+
+        .slick-arrow {
+            position: absolute;
+            top: 50%;
+            z-index: 99;
+        }
+
+        .slick-prev {
+            left: 0;
+        }
+
+        .slick-next {
+            right: 0;
+        }
+
+        .slick-dots {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 10px;
+            list-style: none;
+
+            li {
+                background: var(--text-white);
+                transition: background .5s ease;
+                width: 20px;
+                height: 20px;
+                border-radius: 50px;
+                overflow: hidden;
+            }
+
+            button {
+                width: 20px;
+                height: 20px;
+                border-radius: 50px;
+                background: transparent;
+                border: none;
+                outline: none;
+            }
+
+            .slick-active {
+                background: var(--active-color);
+            }
+        }
+    }
+    &>button {
+        border: 2px solid var(--text-dark);
+        background: inherit;
+        color: var(--text-dark);
+        padding: 10px 25px;
+        min-width: 160px;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19.5px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    @media (width > 768px) {
+        padding: 0 30px;
+    }
+
+    @media (width > 1400px) {
+        padding: 0 40px;
+    }
+
 }
 
 footer {
